@@ -73,7 +73,7 @@ export default function HeroBanner(props: BannerProps) {
           alt={banner.banner_image.filename}
           src={banner.banner_image.url}
           {...banner.banner_image.$?.url as {}}
-        /><i>{banner.subline}</i></div>
+        /><h2>{banner.subline}</h2></div>
        
       ) : (
         ''
