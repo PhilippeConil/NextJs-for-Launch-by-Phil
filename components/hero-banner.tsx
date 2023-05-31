@@ -14,6 +14,7 @@ type Banner = {
   banner_description: string;
   call_to_action: Action;
   banner_image: Image;
+  subline: string;
   $: AdditionalParam;
 }
 
@@ -66,12 +67,14 @@ export default function HeroBanner(props: BannerProps) {
           ''
         )}
       </div>
-      {banner.banner_image ? (
+      {banner.banner_image && banner.subline ? (
+        <div>
         <img
           alt={banner.banner_image.filename}
           src={banner.banner_image.url}
           {...banner.banner_image.$?.url as {}}
-        />
+        /><i>{banner.subline}</i></div>
+       
       ) : (
         ''
       )}
