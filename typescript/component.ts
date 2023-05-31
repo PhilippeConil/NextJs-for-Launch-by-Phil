@@ -93,7 +93,7 @@ export type Banner = {
     call_to_action: Action;
     banner_image: Image;
     text_color: string;
-    subline: string;
+    caption: string;
     $: AdditionalParam;
   }
   
